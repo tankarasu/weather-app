@@ -28,18 +28,18 @@ app.use(express.static(publicDirectoryPath));
 app.get("", (req, res) => {
   res.render("index", {
     title: "Weather App",
-    name: "Andrew Mead",
+    name: "Tan KARASU",
   });
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", { title: "About Page", name: "Andrew Mead" });
+  res.render("about", { title: "About Page", name: "Tan KARASU" });
 });
 
 app.get("/help", (req, res) => {
   res.render("help", {
     title: "help Page",
-    name: "Andrew Mead",
+    name: "Tan KARASU",
     message: "this is the message",
   });
 });
@@ -81,7 +81,7 @@ app.get("/products", (req, res) => {
 app.get("/help/*", (req, res) => {
   res.render("404", {
     title: "Error 404",
-    name: "Andrew Mead",
+    name: "Tan KARASU",
     message: "Help article not found",
   });
 });
@@ -89,7 +89,7 @@ app.get("/help/*", (req, res) => {
 app.get("*", (req, res) => {
   res.render("404", {
     title: "Error 404",
-    name: "Andrew Mead",
+    name: "Tan KARASU",
     message: "Page not found",
   });
 });
