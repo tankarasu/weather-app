@@ -1,5 +1,2 @@
 import "./style.css";
-import "./weather.png";
-import printMe from "./print";
-
-printMe()
+import "../assets/img/index.jpg";

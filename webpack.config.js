@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: { app: "./src/index.js", print: "./src/print.js" },
+  entry: { app: "./src/index.js" },
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist",
@@ -13,9 +13,6 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin(),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-    new HtmlWebpackPlugin({
-      title: "Output Management",
-    }),
   ],
   output: {
     filename: "[name].bundle.js",
@@ -29,8 +26,11 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"],
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[ext]",
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
