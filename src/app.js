@@ -21,6 +21,8 @@ app.set("view engine", "hbs");
 app.set("views", viewsPath);
 hbs.registerPartials(partialPath);
 
+console.log('hello')
+
 //middlewares
 app.use(express.static(publicDirectoryPath));
 

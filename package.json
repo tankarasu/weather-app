@@ -4,7 +4,7 @@
   "description": "",
   "main": "./src/app.js",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node src/app.js -e js,hbs,css",
     "server": "node server.js",
     "build": "webpack",
     "devserver": "webpack-dev-server --open",
