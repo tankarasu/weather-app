@@ -16,9 +16,13 @@
         {{>header}}
         <p>Use this site to get your Weather!</p>
 
-        <form action="">
-            <input placeholder="Location" type="text">
-            <button>Search</button>
+        <form class="input-group mb-3 mt-3 container ">
+            <input type="text" class="form-control" placeholder="Location..." />
+
+            <div class="input-group-append bg-dark pr-1">
+                <button class="btn btn-dark" type="button">Search</button>
+                <img class="bg-dark ml-2" src="./src/localisation.png" style="width:35px;" />
+            </div>
         </form>
 
         <p id="message-1"></p>
