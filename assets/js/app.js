@@ -1,5 +1,5 @@
-const weatherForm = document.querySelector("form");
-const search = document.querySelector("input");
+const weatherForm = document.getElementById("form");
+const search = document.getElementById("search");
 const messageOne = document.getElementById("message-1");
 const messageTwo = document.getElementById("message-2");
 
