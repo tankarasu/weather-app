@@ -1,3 +1,6 @@
+//import fichiers externes
+
+
 //core modules
 const path = require("path");
 
@@ -9,7 +12,7 @@ const express = require("express");
 const hbs = require("hbs");
 const app = express();
 
-const port = process.env.PORT  || 3000
+const port = process.env.PORT || 3000;
 
 //PATHS for Express Config
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -21,7 +24,7 @@ app.set("view engine", "hbs");
 app.set("views", viewsPath);
 hbs.registerPartials(partialPath);
 
-console.log('hello')
+console.log("hello");
 
 //middlewares
 app.use(express.static(publicDirectoryPath));

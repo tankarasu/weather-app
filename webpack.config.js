@@ -5,8 +5,9 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: { app: "./src/index.js" },
+  entry: {app:"./src/app.js",index:"./src/index.js"},
   devtool: "inline-source-map",
+  target:'node',
   devServer: {
     contentBase: "./dist",
   },
@@ -21,6 +22,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
       {
         test: /\.(png|jpe?g|gif)$/i,
         loader: "file-loader",

@@ -1,2 +1,4 @@
 import "./style.css";
-import "../assets/img/index.jpg";
+import "../assets/img/localisation.png";
+import "../assets/img/weather.png";
+import "../assets/img/me.jpg";
