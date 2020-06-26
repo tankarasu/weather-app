@@ -6,33 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="./index.css" type="text/css">
+    <link rel="icon" href="../assets/img/weather.png">
     <title>About</title>
 </head>
 
 <body>
-    <div class="main-content">
+    <div class="container">
         {{>header}}
+        <h2 class="titre bg-dark text-white text-center">
+            à Propos de Moi.
+        </h2>
+        <div class="row">
+            <img src="/assets/img/me.jpg" alt="logo" class="portrait col-sm-4" />
+            <div class="col-sm-8">
+                <p class="aboutText text-justify mt-2">
+                    Je m'appelle Tan KARASU. Je suis actuellement agent d'escale dans le
+                    groupe SNCF et je suis un passioné d'informatique et de programmation.</p>
+                <p class="aboutText text-justify mt-2">
+                    Je me focalise essentiellement sur les technologies JS, tels que
+                    NodeJS et React.
+                </p>
+            </div>
+        </div>
+        <h2 class="titre bg-dark text-white text-center mt-2">
+            à Propos de l'application.
+        </h2>
+        <div class="card-deck ">
+            <div class="card shadow bg-light mt-2 border-dark  mb-2">
+                <img class="card-img-top mt-2 ml-2" src="/assets/img/IP.png" alt="Card image" />
+                <div class="card-body text-center ">
+                    <p class="card-text text-secondary text-justify ">
+                        récupère les coordonnées GPS grâce à l'IP de l'appareil.
+                    </p>
+                </div>
+                <h4 class="card-footer bg-secondary text-center text-white container mb-0">
+                    Géo-IP
+                </h4>
+            </div>
 
-        <img src="/img/me.jpg" alt="logo" class="portrait">
-        <p class="aboutText">
-            Je m'appelle Tan KARASU.
-        </p>
+            <div class="card shadow bg-light mt-2 border-dark  mb-2">
+                <img src="/assets/img/ville.png" alt="ville" class="card-img-top" />
+                <div class="mt-2"><kbd>"Paris"</kbd> + <kbd>Enter</kbd></div>
+                <div class="card-body text-center">
+                    <p class="card-text text-secondary text-justify ">
+                        récupère les coordonnées GPS par nom de ville.
+                    </p>
+                </div>
+                <h4 class="card-footer bg-secondary text-center text-white container mb-0">
+                    Géo-Ville
+                </h4>
+            </div>
+        </div>
+        <h2 class="titre bg-dark text-white text-center mt-2">
+            à Propos des technologies utilisées.
+        </h2>
+        <div class="card-deck ">
+            <div class="card shadow bg-light mt-2 border-dark  mb-2">
+                <img src="/assets/img/weatherapp.png" alt="weatherAPI" class="card-img-top" />
+                <div class="card-body text-center">
+                    <p class="card-text text-secondary text-justify ">
+                        API météo qu retransmet les prévisions à partir de coordonnées GPS.
+                    </p>
+                </div>
+                <h4 class="card-footer bg-secondary text-center text-white container mb-0">
+                    weatherstack.com
+                </h4>
+            </div>
+            <div class="card shadow bg-light mt-2 border-dark  mb-2">
+                <img src="/assets/img/nodeicon.png" alt="node JS" class="card-img-top mt-2" />
+                <div class="card-body text-center">
+                    <p class="card-text text-secondary text-justify ">
+                        API REST qui récupère, puis traite les prévisions de weatherstack.
+                    </p>
+                </div>
+                <h4 class="card-footer bg-secondary text-center text-white container mb-0">
+                    Node JS
+                </h4>
+            </div>
+            <div class="card shadow bg-light mt-2 border-dark  mb-2">
+                <img src="/assets/img/webpack.png" alt="Webpack" class="card-img-top mt-2" />
+                <div class="card-body text-center">
+                    <p class="card-text text-secondary text-justify ">
+                        Bundler de fichier, JS et CSS ainsi que les fichiers images pour ce projet.
+                    </p>
+                </div>
+                <h4 class="card-footer bg-secondary text-center text-white container mb-0">
+                    Webpack
+                </h4>
+            </div>
+            <div class="card shadow bg-light mt-2 border-dark  mb-2">
+                <img src="/assets/img/vanilla.jpg" alt="Webpack" class="card-img-top mt-2" />
+                <div class="card-body text-center">
+                    <p class="card-text text-secondary text-justify ">
+                        Affichage des resultats et manipulation du DOM en Vanilla - JS
+                    </p>
+                </div>
+                <h4 class="card-footer bg-secondary text-center text-white container mb-0">
+                    Vanilla - JS
+                </h4>
+            </div>
+            <div class="card shadow bg-light mt-2 border-dark  mb-2">
+                <img src="/assets/img/handlebars.png" alt="handlebars" class="card-img-top mt-2" />
+                <div class="card-body text-center">
+                    <p class="card-text text-secondary text-justify ">
+                        moteur de template et partials en Handlebars
+                    </p>
+                </div>
+                <h4 class="card-footer bg-secondary text-center text-white container mb-0">
+                    Handlebars
+                </h4>
+            </div>
+            <div class="card shadow bg-light mt-2 border-dark  mb-2">
+                <img src="/assets/img/html.png" alt="html" class="card-img-top mt-2" />
+                <div class="card-body text-center">
+                    <p class="card-text text-secondary text-justify ">
+                        Balisage sémantique en HTML 5 et feuille de style en CSS 3
+
+                    </p>
+                </div>
+                <h4 class="card-footer bg-secondary text-center text-white container mb-0">
+                    HTML-CSS
+                </h4>
+            </div>
+            <div class="card shadow bg-light mt-2 border-dark  mb-2">
+                <img src="/assets/img/bootstrap.jpeg" alt="bootstrap" class="card-img-top mt-2" />
+                <div class="card-body text-center">
+                    <p class="card-text text-secondary text-justify ">
+                        Responsive design en Bootstrap 4
+                    </p>
+                </div>
+                <h4 class="card-footer bg-secondary text-center text-white container mb-0">
+                    HTML-CSS
+                </h4>
+            </div>
+        </div>
+
+
+        {{>footer}}
     </div>
-    <p class="aboutText">
-        Je m'appelle Tan KARASU. Je suis actuellement agent d'escale dans le groupe SNCF et je suis un passioné
-        d'informatique et de programmation. Je me focalise essentiellement sur les technologies JS, tels que NodeJS
-        et React.
-    </p>
-    <p class="aboutText">Cette application méteo utilise différentes features pour fonctionner:</p>
-    <ul>
-        <li>Récupération de L'IP en fonction de la ville entrée</li>
-        <li>Géolocalisation en fonction de l'IP avec une API spécifique</li>
-        <li>Récupération des données méteorologiques à l'aide d'une weather API</li>
-        <li>Affichage des données récupérés en NodeJS</li>
-    </ul>
-    {{>footer}}
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

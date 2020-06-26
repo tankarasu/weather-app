@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
-    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="./index.css" type="text/css">
+    <link rel="icon" href="/assets/img/weather.png">
     <title>Weather</title>
 </head>
 
@@ -16,9 +16,13 @@
         {{>header}}
         <p>Use this site to get your Weather!</p>
 
-        <form action="">
-            <input placeholder="Location" type="text">
-            <button>Search</button>
+        <form id="form" class="input-group mb-3 mt-3 container ">
+            <input id="search" type="text" class="form-control" placeholder="Location..." />
+
+            <div class="input-group-append bg-dark pr-1">
+                <input class="btn btn-dark" type="submit">Search</input>
+                <img class="bg-dark ml-2" src="/assets/img/localisation.png" style="width:35px;" />
+            </div>
         </form>
 
         <p id="message-1"></p>
@@ -36,7 +40,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="/js/app.js"></script>
+    <script src="./index.bundle.js"></script>
 </body>
 
 </html>

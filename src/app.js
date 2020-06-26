@@ -9,7 +9,7 @@ const express = require("express");
 const hbs = require("hbs");
 const app = express();
 
-const port = process.env.PORT  || 3000
+const port = process.env.PORT || 3000;
 
 //PATHS for Express Config
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -20,8 +20,6 @@ const partialPath = path.join(__dirname, "../templates/partials");
 app.set("view engine", "hbs");
 app.set("views", viewsPath);
 hbs.registerPartials(partialPath);
-
-console.log('hello')
 
 //middlewares
 app.use(express.static(publicDirectoryPath));
@@ -68,17 +66,6 @@ app.get("/weather", (req, res) => {
   });
 });
 
-app.get("/products", (req, res) => {
-  if (!req.query.search) {
-    return res.send({
-      error: "You Must Provide a search term",
-    });
-  }
-  console.log(req.query);
-  res.send({
-    products: [],
-  });
-});
 
 app.get("/help/*", (req, res) => {
   res.render("404", {
