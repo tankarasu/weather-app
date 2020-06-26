@@ -5,5 +5,11 @@ import "../assets/img/nodeicon.png";
 import "../assets/img/weatherapp.png";
 import "../assets/img/IP.png";
 import "../assets/img/ville.png";
+import "../assets/img/webpack.png";
+import "../assets/img/vanilla.jpg";
+import "../assets/img/handlebars.png";
+import "../assets/img/html.png";
+import "../assets/img/css.png";
 import "../assets/img/me.jpg";
-import '../assets/js/app.js'
+import "../assets/img/bootstrap.jpeg";
+import "../assets/js/app.js";
