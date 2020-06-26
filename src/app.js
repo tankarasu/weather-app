@@ -36,14 +36,6 @@ app.get("/about", (req, res) => {
   res.render("about", { title: "About Page", name: "Tan KARASU" });
 });
 
-app.get("/help", (req, res) => {
-  res.render("help", {
-    title: "help Page",
-    name: "Tan KARASU",
-    message: "this is the message",
-  });
-});
-
 app.get("/weather", (req, res) => {
   if (!req.query.adress) {
     return res.send({
@@ -63,15 +55,6 @@ app.get("/weather", (req, res) => {
         adress: req.query.adress,
       });
     });
-  });
-});
-
-
-app.get("/help/*", (req, res) => {
-  res.render("404", {
-    title: "Error 404",
-    name: "Tan KARASU",
-    message: "Help article not found",
   });
 });
 
